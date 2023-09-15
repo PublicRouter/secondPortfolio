@@ -1,0 +1,20 @@
+{
+  "name": "secondportfolio",
+  "version": "1.0.0",
+  "description": "secondary portfolio design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PublicRouter/secondPortfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PublicRouter/secondPortfolio/issues"
+  },
+  "homepage": "https://github.com/PublicRouter/secondPortfolio#readme"
+}
