@@ -15,7 +15,6 @@
     --orange-box-shadow: 1px 1px 10px #7824b8, 8px -1px 10px #f6a122;
     --orange-inset-box-small: inset 3px 5px 4px #d2a56a, inset -3px -3px 6px #fff;
 
-
 }
 
 * {
@@ -192,7 +191,6 @@ body {
 }
 
 #learn-more {
-    /* background-color: #e9e9eead; */
     border: 1px solid rgb(211, 210, 210);
     margin-top: 3vh;
     padding: 4px 8px;
@@ -215,7 +213,6 @@ body {
     font-size: .9em;
     box-shadow: var(--inset-box-small);
     border-radius: 10px;
-    /* border: 1px solid #de8807; */
     padding: 30px 30px;
     line-height: 16px;
     color: #de8807;
@@ -233,7 +230,6 @@ body {
     padding: 5px;
     border-radius: 5px;
     border: 1px solid purple;
-    /* box-shadow: var(--box-shadow); */
 }
 
 #lets-chat:hover {
@@ -262,7 +258,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* box-shadow: var(--inset-box-small); */
     padding: 10px;
     border-radius: 5px;
     color: purple;
@@ -277,19 +272,6 @@ body {
     padding: 10px;
 }
 
-/* #aboutSection p a {
-    margin-left: 2vw;
-    padding-top: 3vh;
-} */
-
-/* #learn-more:focus {
-    outline: 1px solid #fff;
-    outline-offset: -4px;
-}
-
-#learn-more:active {
-    transform: scale(0.99);
-} */
 #projects {
     margin-top: 5vh;
     margin-bottom: 6vh;
@@ -360,13 +342,10 @@ body {
     color: #672996;
     box-shadow: var(--inset-box-small);
     border-radius: 10px;
-    /* background: linear-gradient(to bottom right, rgba(182, 182, 233, 0.376), rgba(240, 228, 157, 0.35)) */
 }
 
 #contact-lists-container ul li {
-    /* font-size: .8em; */
     letter-spacing: 2px;
-    /* color: rgb(248, 223, 195); */
 }
 
 #contact-lists-container ul li a {
@@ -512,7 +491,6 @@ footer p {
         background-size: 600px auto;
         max-width: 720px;
         margin-inline: auto;
-        /* You can adjust this value to fit your needs */
     }
 
     .secondary-title {
@@ -543,7 +521,6 @@ footer p {
     }
 
     #contact {
-        /* padding: 2.5rem 6em; */
         margin: 2rem;
         margin-top: 0px;
     }
