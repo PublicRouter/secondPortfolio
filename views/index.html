@@ -26,32 +26,31 @@
         </div>
     </nav>
 
-
     <section id="hero">
         <h1>Hey! I see you!</h1>
         <p>Thanks for checking out my website.</p>
-        <button id="learn-more">Hire me!</button>
+        <a  href="#aboutSection">
+            <button id="learn-more">Meet James!</button>
+        </a>
     </section>
 
     <section id="aboutSection">
         <div class="secondary-title-container">
             <h2 class="secondary-title">About Me</h2>
             <div class="typewriter">
-                <h5>Title: <span id="typed-text">Title: </span><span class="cursor">|</span></h5>
+                <h5>Title: <span id="typed-title"></span><span class="cursor">|</span></h5>
             </div>
         </div>
         <div id="aboutSection-text">
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi non enim similique velit minima iure
-                atque quasi!
-                Libero sit commodi numquam sed non doloremque nihil distinctio temporibus eius corporis dolorem atque
-                eos eaque,
-                et quam ex asperiores autem eum, quae eveniet accusantium amet? Laboriosam commodi iure, quaerat
-                nesciunt sequi laudantium!
+            <p id="about-section-first-p">
+                Hi, Im James! I love computers, working on cars, lifting weights, and learning how things work by reverse-engineering them. 
+                I am mostly self-taught from online resources such as David J. Malan's CS50, MIT OpenCourseWare, freecodecamp, as well as certification in web-development from a University of Texas Bootcamp.
+                Has anyone told you don't work a job you don't love? I always thought this was a joke until I started building projects and solving problems with computer programs.
             </p>
             <br />
+            <p>Want to... <span id="typed-chat" style="color: purple"></span><span class="cursor">|</span> </p>
             <br />
-            <a id="lets-chat" href="mailto:jkggaringer@gmail.com" target="_blank">Let's Chat!</a>
+            <a id="lets-chat" href="mailto:buildbettertech@proton.me" target="_blank">Let's Chat!</a>
 
         </div>
     </section>
@@ -127,34 +126,41 @@
         <div class="secondary-title-container">
             <h2 class="secondary-title">Projects</h2>
         </div>
-        <!-- Sample project card -->
+        <!-- Projects Container -->
         <div id="projectCardsContainer">
             <div class="project-card">
-                <img src="../assets/project_placeholder_image.png" alt="Project Name">
-                <h3>Project Name</h3>
-                <p>Short description of the project.</p>
-                <button>More</button>
+                <div class="project-image-container">
+                    <img src="../assets/projectScreenshots/gpt_audio.png" alt="Project Name">
+                </div>
+                <h3>GPT Audio Chat</h3>
+                <p>Device picks up audio and converts to text to send to OpenAI API, then converts response to audio.</p>
+                <button onclick="window.open('https://github.com/PublicRouter/gpt3.5AudioConverter', '_blank')">More</button>
             </div>
             <div class="project-card">
-                <img src="../assets/project_placeholder_image.png" alt="Project Name">
-                <h3>Project Name</h3>
-                <p>Short description of the project.</p>
-                <button>More</button>
+                <div class="project-image-container">
+                    <img src="../assets/projectScreenshots/pw_profile.png" alt="Project Name">
+                </div>
+                <h3>PocketWallet</h3>
+                <p>Connect XRPL account to visualize, and interact with its functionality and history. Chat with other connected accounts.</p>
+                <button onclick="window.open('https://github.com/PublicRouter/xumm_login_socket.io', '_blank')">More</button>
             </div>
             <div class="project-card">
-                <img src="../assets/project_placeholder_image.png" alt="Project Name">
-                <h3>Project Name</h3>
-                <p>Short description of the project.</p>
-                <button>More</button>
+                <div class="project-image-container">
+                    <img src="../assets/projectScreenshots/freelance.png" alt="Project Name">
+                </div>
+                <h3>Freelance Site</h3>
+                <p>See some of my work, and what my services offer. Fill out google form / email me to inquire about your project.</p>
+                <button onclick="window.open('https://jgfreelance.webflow.io/', '_blank')">More</button>
             </div>
             <div class="project-card">
-                <img src="../assets/project_placeholder_image.png" alt="Project Name">
-                <h3>Project Name</h3>
-                <p>Short description of the project.</p>
-                <button>More</button>
+                <div class="project-image-container">
+                    <img src="../assets/projectScreenshots/styleTracker.png" alt="Project Name">
+                </div>
+                <h3>StyleTracker</h3>
+                <p>E-commerce store for any type of goods you want sell using stripe, admin account to see orders and upload / delete products.</p>
+                <button onclick="window.open('https://style-tracker.vercel.app/', '_blank')">More</button>
             </div>
         </div>
-
     </section>
 
     <section id="contact">
@@ -165,53 +171,45 @@
             <ul>
                 <h3>Nav</h3>
                 <li>
-                    <a>Home</a>
+                    <a href="#hero">Home</a>
                 </li>
                 <li>
-                    <a>About</a>
+                    <a href="#aboutSection">About</a>
                 </li>
                 <li>
-                    <a>Projects</a>
+                    <a href="#projects">Projects</a>
                 </li>
                 <li>
-                    <a>Work</a>
-                </li>
-                <li>
-                    <a>Skills</a>
+                    <a href="#skills">Skills</a>
                 </li>
             </ul>
             <ul>
                 <h3>Social</h3>
                 <li>
-                    <a>Linkedin</a>
+                    <a href="https://www.linkedin.com/in/james-garinger-22246421b/" target="_blank">Linkedin</a>
                 </li>
                 <li>
-                    <a>Twitter</a>
-                </li>
-                <li>
-                    <a>Website</a>
-                </li>
-                <li>
-                    <a>Work</a>
-                </li>
-                <li>
-                    <a>E-Mail</a>
-                </li>
+                    <a href="https://twitter.com/GaringerJames" target="_blank">Twitter</a>
+                </li>      
             </ul>
             <ul>
                 <h3>Hire Me</h3>
                 <li>
-                    <a>Freelance Site</a>
+                    <a href="https://jgfreelance.webflow.io/" target="_blank">Freelance Site</a>
                 </li>
                 <li>
-                    <a>Website Survey</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeisKLxXcRUJk__p6GUjJmhoarUelKtEMfPyPIHvIffDqSmWw/viewform" target="_blank">Website Survey</a>
                 </li>
                 <li>
-                    <a>Resume</a>
+                    <a href="https://docs.google.com/document/d/1T5jgzjmHz6P1M2901jkxD5vcjqloJTj8/edit?usp=sharing&ouid=116539845614554488994&rtpof=true&sd=true" target="_blank">Resume</a>
+                </li>
+                <li>
+                    <a href="mailto:buildbettertech@proton.me">E-Mail</a>
                 </li>
             </ul>
         </div>    
     </section>
+    
     <footer>
         <p>Let's build something together! Reach out to me at 
             <a id="mail-link" href="mailto:buildbettertech@proton.me">buildbettertech@proton.me</a>.

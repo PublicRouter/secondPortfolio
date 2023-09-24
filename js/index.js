@@ -1,6 +1,12 @@
-document.getElementById("learn-more").addEventListener("click", function () {
-    alert("Thanks for your interest! Scroll down to explore my projects.");
-});
+window.onload = function() {
+    const aboutText = document.getElementById("about-section-first-p");
+    const targetWords = ["James", "CS50", "OpenCourseWare", "freecodecamp", "University Of Texas"];
+
+    targetWords.forEach(word => {
+        const regex = new RegExp(`(${word})`, "gi");
+        aboutText.innerHTML = aboutText.innerHTML.replace(regex, '<span style="color: rgb(189, 110, 7); font-weight: 500;">$1</span>');
+    });
+};
 
 const hamburgerMenu = document.getElementById("hamburger-menu");
 const navLinks = document.getElementById("nav-links");
@@ -49,33 +55,37 @@ document.querySelectorAll('.nav-links a').forEach(function (link) {
     });
 });
 
-//typewriter animation
-const typedTextSpan = document.getElementById("typed-text");
-const phrases = ["Software Developer", "Web Developer", "Tech Enthusiast"];
-let phraseIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+//type writer animation function
+function createTypewriterAnimation(targetElementId, phrases) {
+    const typedTextSpan = document.getElementById(targetElementId);
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
 
-function type() {
-    if (charIndex < phrases[phraseIndex].length && !isDeleting) {
-        typedTextSpan.textContent += phrases[phraseIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(type, 200);
-    } else if (isDeleting && charIndex > 0) {
-        typedTextSpan.textContent = typedTextSpan.textContent.slice(0, charIndex - 1);
-        charIndex--;
-        setTimeout(type, 100);
-    } else if (charIndex === 0 && isDeleting) {
-        isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-        setTimeout(type, 500);  // Adding a pause before starting to type again
-    } else {
-        isDeleting = true;
-        setTimeout(type, 2000);  // Wait a second before starting to delete
+    function type() {
+        if (charIndex < phrases[phraseIndex].length && !isDeleting) {
+            typedTextSpan.textContent += phrases[phraseIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, 200);
+        } else if (isDeleting && charIndex > 0) {
+            typedTextSpan.textContent = typedTextSpan.textContent.slice(0, charIndex - 1);
+            charIndex--;
+            setTimeout(type, 100);
+        } else if (charIndex === 0 && isDeleting) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            setTimeout(type, 500);  // Adding a pause before starting to type again
+        } else {
+            isDeleting = true;
+            setTimeout(type, 2000);  // Wait a second before starting to delete
+        }
     }
+
+    type();  // Kick off the typewriter effect
 }
 
-type();
+createTypewriterAnimation("typed-title", ["Software Developer", "Web Developer", "Tech Enthusiast"]);
+createTypewriterAnimation("typed-chat", ["chat?", "build?", "hire me?"]);
 
 //skills rotater
 function rotateSkills() {
