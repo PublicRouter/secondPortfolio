@@ -30,6 +30,11 @@ body {
     line-height: 1.5;
 }
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s; /* Adjust the duration as you see fit */
+}
+
 .secondary-title-container {
     width: 100%;
     display: flex;

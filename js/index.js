@@ -8,6 +8,31 @@ window.onload = function() {
     });
 };
 
+document.addEventListener("DOMContentLoaded", function() {
+    const fadeInElements = document.querySelectorAll('.fade-in');
+
+    // Define the observer options
+    const options = {
+        root: null, // Default is the viewport
+        rootMargin: '0px', // No margins
+        threshold: 0.5 // Callback will fire when 50% of the target is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.intersectionRatio >= 0.5) { // Check if more than 50% of the element is visible
+                entry.target.style.opacity = '1';
+                observer.unobserve(entry.target); // Stop observing the current element
+            }
+        });
+    }, options);
+
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+});
+
+
 const hamburgerMenu = document.getElementById("hamburger-menu");
 const navLinks = document.getElementById("nav-links");
 
