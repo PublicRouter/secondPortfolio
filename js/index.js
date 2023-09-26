@@ -15,12 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const options = {
         root: null, // Default is the viewport
         rootMargin: '0px', // No margins
-        threshold: 0.5 // Callback will fire when 50% of the target is visible
+        threshold: 0.3 // Callback will fire when 50% of the target is visible
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.intersectionRatio >= 0.5) { // Check if more than 50% of the element is visible
+            if (entry.intersectionRatio >= 0.3) { // Check if more than 50% of the element is visible
                 entry.target.style.opacity = '1';
                 observer.unobserve(entry.target); // Stop observing the current element
             }
